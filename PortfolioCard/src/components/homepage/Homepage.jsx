@@ -1,5 +1,14 @@
-import { useEffect, useRef } from "react";
-import styled from 'styled-components';
+import { useEffect, useRef, useState } from "react";
+import styled, { keyframes } from 'styled-components';
+
+const fadeIn = keyframes`
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+`;
 
 const Background = styled.div`
   height: 100vh;
@@ -12,18 +21,19 @@ const Background = styled.div`
 `;
 
 const Container = styled.div`
-  height: 90vh;
-  width: 90vw;
+  height: calc(100vh - 50px);
+  width: calc(100vw - 50px);
   border: 1px solid #c3c3c3;
   background-color: hsl(0, 0%, 5%);
   position: fixed;
+  animation: ${fadeIn} 1s ease-in-out forwards;
 `;
 
 const Header = styled.div`
   width: 16rem;
   height: 20rem;
   color: #c3c3c3;
-  margin: 2rem;
+  margin: 1.6rem;
 `;
 
 const H1 = styled.h1`
@@ -51,7 +61,7 @@ const About = styled.div`
   width: 12rem;
   height: 16rem;
   color: #c3c3c3;
-  margin: 2rem;
+  margin: 1.6rem;
   position: absolute;
   bottom: 0;
   right: 0;  

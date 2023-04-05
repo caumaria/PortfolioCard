@@ -8,7 +8,7 @@ function App() {
   useEffect(() => {
     setTimeout(() => {
       setLoading(false);
-    }, 3000); 
+    }, 2800); 
   }, []);
 
   return <>{loading ? <Splash /> : <Homepage />}</>;

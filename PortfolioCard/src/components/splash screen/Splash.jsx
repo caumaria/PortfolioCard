@@ -1,6 +1,15 @@
 import Typed from "typed.js";
-import { useEffect, useRef } from "react";
-import styled from "styled-components";
+import { useEffect, useRef, useState } from "react";
+import styled, { keyframes } from "styled-components";
+
+const fadeOut = keyframes`
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+`;
 
 const Container = styled.div`
   height: 100vh;
@@ -16,7 +25,9 @@ const Title = styled.h1`
   text-align: center;
   color: white;
   display: flex;
+  animation: ${fadeOut} 1s ease-in-out forwards 2s;
 `;
+
 
 const Splash = () => {
   const name = useRef(null);
@@ -25,7 +36,7 @@ const Splash = () => {
     const typed = new Typed(name.current, {
       strings: ["cau. "],
       startDelay: 600,
-      typeSpeed: 180,      
+      typeSpeed: 140,
     });
 
     return () => {
@@ -34,13 +45,24 @@ const Splash = () => {
   }, []);
 
 
-  return (
-    <Container>
-      <Title>
-        <pre ref={name}></pre>
-        <pre id="portfolio">portfolio</pre>
-      </Title>
-    </Container>
+  const [show, setShow] = useState(true);
+  
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setShow(false);
+    }, 2000);
+
+    return () => clearTimeout(timer);
+  }, []);
+
+
+  return (   
+      <Container>
+        <Title show={show}>
+          <pre ref={name}></pre>
+          <pre id="portfolio">portfolio</pre>
+        </Title>
+      </Container>
   );
 };
 
