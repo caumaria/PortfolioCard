@@ -1,5 +1,6 @@
-import { useEffect, useRef, useState } from "react";
-import styled, { keyframes } from 'styled-components';
+import { useEffect, useRef } from "react";
+import styled, { keyframes } from "styled-components";
+import { Link, Outlet } from "react-router-dom";
 
 const fadeIn = keyframes`
   from {
@@ -17,7 +18,7 @@ const Background = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  font-family: 'Inconsolata', monospace;
+  font-family: "Inconsolata", monospace;
 `;
 
 const Container = styled.div`
@@ -39,43 +40,33 @@ const Header = styled.div`
 const H1 = styled.h1`
   font-weight: 200;
   font-size: 40px;
-  padding-bottom: .5rem;
+  padding-bottom: 0.5rem;
 `;
 
 const Flex = styled.div`
-  display: flex,
+  display: flex;
 `;
 
 const Ul = styled.ul`
   list-style: none;
   cursor: pointer;
-  padding-top: 2rem;  
+  padding-top: 2rem;
 `;
 
 const Li = styled.li`
-  padding-top: .8rem;
+  padding-top: 0.8rem;
   font-weight: 900;
 `;
 
-const About = styled.div`
-  width: 12rem;
-  height: 16rem;
-  color: #c3c3c3;
-  margin: 1.6rem;
-  position: absolute;
-  bottom: 0;
-  right: 0;  
-`;
-
-const Homepage = () => {
+const Home = () => {
   const webD = useRef(null);
 
   useEffect(() => {
     const typedWeb = new Typed(webD.current, {
-      strings: ['.web developer'],
+      strings: [".web developer"],
       startDelay: 400,
       typeSpeed: 70,
-      backDelay: 500,           
+      backDelay: 500,
     });
 
     return () => {
@@ -90,38 +81,41 @@ const Homepage = () => {
           <H1>Cau Ugolini</H1>
           <Flex>
             <pre ref={webD}></pre>
-          </Flex>         
+          </Flex>
 
           <Ul>
-            <Li>Home</Li>
-            <Li>Projects</Li>
-            <Li>Contact</Li>
+            <Li>
+              <Link 
+              to="/" 
+              style={{ textDecoration: "none", color: "white" }}
+              >
+                Home
+              </Link>
+            </Li>
+            <Li>
+              <Link
+                to="/Projects"
+                style={{ textDecoration: "none", color: "white" }}
+              >
+                Projects
+              </Link>
+            </Li>
+            <Li>
+              <Link
+                to="/Contact"
+                style={{ textDecoration: "none", color: "white" }}
+              >
+                Contact
+              </Link>
+            </Li>
           </Ul>
+          <Outlet />
+
 
         </Header>
-
-        <About>
-          <p>
-            Born in 1815.
-          </p>
-          <p>
-            Caindo aos pedaços, lutando pela  
-            sobrevivencia nesse mundo cruel.
-            asha ara ara lal ala alalala
-            ashalalala lenga lenga WE NEED MORE WORDS, WATSON.
-            <br></br>
-            <br></br>
-            Resume about cacadinha's life.
-            <br></br>
-            <br></br>
-            Coming soon.
-          </p>
-        </About>
-
-
-      </Container>      
+      </Container>
     </Background>
-  )
-}
+  );
+};
 
-export default Homepage;
+export default Home;
