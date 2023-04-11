@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import Github from "../assets/github.svg";
 import Linkedin from "../assets/linkedin.svg";
-import Email from "../assets/email.svg"
+
 
 
 const Info = styled.div`
@@ -13,8 +13,6 @@ const Info = styled.div`
   bottom: 0;
   right: 0;
   z-index: 99;
-  padding-bottom: 1rem;
-
 `;
 
 const Social = styled.img`
