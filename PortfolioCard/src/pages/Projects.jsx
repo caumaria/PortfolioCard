@@ -1,6 +1,8 @@
 import React from "react";
 import styled from "styled-components";
 import { motion } from "framer-motion";
+import { fadeIn, staggerContainer } from "../components/data/motion"
+import { projects } from "../components/data/data";
 
 const Conteiner = styled(motion.div)`
   width: auto;
@@ -13,17 +15,7 @@ const Conteiner = styled(motion.div)`
   z-index: 99;
 `;
 
-const staggerContainer = (staggerChildren, delayChildren) => ({
-  hidden: {},
-  show: {
-    transition: {
-      staggerChildren,
-      delayChildren,
-    },
-  },
-});
-
-const ContainerSlideIn = styled(motion.div)`
+export const ContainerSlideIn = styled(motion.div)`
   position: relative;
 `;
 
@@ -33,68 +25,6 @@ const StyledProject = styled.div`
   margin: 1.6rem;
   cursor: pointer;
 `;
-
-const fadeIn = (direction, type, delay, duration) => ({
-  hidden: {
-    x: direction === "left" ? 100 : direction === "right" ? -100 : 0,
-    y: direction === "up" ? 100 : direction === "down" ? -100 : 0,
-    opacity: 0,
-  },
-  show: {
-    x: 0,
-    y: 0,
-    opacity: 1,
-    transition: {
-      type,
-      delay,
-      duration,
-      ease: "easeOut",
-    },
-  },
-});
-
-const projects = [
-  {
-    name: "DESIGN To HTML/CSS",
-    projects: "Fully Responsive Application",
-    year: "Study case, 2023."
-  },
-  {
-    name: "WEB & MOBILE APP",
-    projects: "19 projects",
-    year: "Personal, 2023."
-  },
-  {
-    name: "JavaScript Support",
-    projects: "Front-end Behaviorial Support",
-    year: "Study case, 2023."
-  },
-  {
-    name: "Design to HTML/CSS",
-    projects: "Fully Responsive Application",
-    year: "Study case, 2023."
-  },
-  {
-    name: "Web & Mobile App",
-    projects: "19 projects",
-    year: "Study case, 2023."
-  },
-  {
-    name: "JavaScript Support",
-    projects: "Front-end Behaviorial Support",
-    year: "Study case, 2023."
-  },
-  {
-    name: "JavaScript Support",
-    projects: "Front-end Behaviorial Support",
-    year: "Study case, 2023."
-  },
-  {
-    name: "JavaScript Support",
-    projects: "Front-end Behaviorial Support",
-    year: "Study case, 2023."
-  },
-];
 
 const Projects = () => {
   return (

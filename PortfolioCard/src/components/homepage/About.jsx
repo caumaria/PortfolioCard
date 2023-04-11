@@ -1,7 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
+import { motion } from 'framer-motion';
+import { fadeIn, staggerContainer } from '../data/motion';
+import { ContainerSlideIn } from '../../pages/Projects';
 
-const AboutDiv = styled.div`
+const AboutDiv = styled(motion.div)`
   width: 12rem;
   height: 16rem;
   color: #c3c3c3;
@@ -14,7 +17,15 @@ const AboutDiv = styled.div`
 
 const About = () => {
   return (
-    <AboutDiv>
+    <AboutDiv
+    variants={staggerContainer}
+    initial="hidden"
+    whileInView="show"
+    viewport={{ once: false, amount: 0.25 }}
+    >
+      <ContainerSlideIn
+      variants={fadeIn("left", "tween", 0.2, 2)}
+      >
           <p>
             Born in 1815.
           </p>
@@ -30,6 +41,7 @@ const About = () => {
             <br></br>
             Coming soon.
           </p>
+        </ContainerSlideIn>
     </AboutDiv>
   )
 }
