@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 const Conteiner = styled(motion.div)`
   width: auto;
-  height: 16rem;
+  height: auto;
   color: #c3c3c3;
   position: absolute;
   bottom: 0;
@@ -31,6 +31,7 @@ const StyledProject = styled.div`
   width: 16rem;
   color: rgb(195, 195, 195);
   margin: 1.6rem;
+  cursor: pointer;
 `;
 
 const fadeIn = (direction, type, delay, duration) => ({
@@ -54,16 +55,44 @@ const fadeIn = (direction, type, delay, duration) => ({
 
 const projects = [
   {
-    name: "Design to HTML/CSS",
+    name: "DESIGN To HTML/CSS",
     projects: "Fully Responsive Application",
+    year: "Study case, 2023."
   },
   {
-    name: "Web & Mobile App",
+    name: "WEB & MOBILE APP",
     projects: "19 projects",
+    year: "Personal, 2023."
   },
   {
     name: "JavaScript Support",
     projects: "Front-end Behaviorial Support",
+    year: "Study case, 2023."
+  },
+  {
+    name: "Design to HTML/CSS",
+    projects: "Fully Responsive Application",
+    year: "Study case, 2023."
+  },
+  {
+    name: "Web & Mobile App",
+    projects: "19 projects",
+    year: "Study case, 2023."
+  },
+  {
+    name: "JavaScript Support",
+    projects: "Front-end Behaviorial Support",
+    year: "Study case, 2023."
+  },
+  {
+    name: "JavaScript Support",
+    projects: "Front-end Behaviorial Support",
+    year: "Study case, 2023."
+  },
+  {
+    name: "JavaScript Support",
+    projects: "Front-end Behaviorial Support",
+    year: "Study case, 2023."
   },
 ];
 
@@ -83,8 +112,15 @@ const Projects = () => {
               key={i}
             >
               <StyledProject>
-                <p>{exp.name}</p>
-                <p>{exp.projects}</p>
+                <h3 style={{ fontWeight: 400}}>
+                  • {exp.name}
+                </h3>
+                <p style={{ fontWeight: 350}}>
+                  {exp.projects}
+                </p>
+                <p style={{fontSize: 11, fontWeight: 700, float: 'right'}}>
+                  {exp.year}
+                </p>
               </StyledProject>
             </ContainerSlideIn>
           );
