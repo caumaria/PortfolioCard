@@ -8,11 +8,12 @@ const AboutDiv = styled(motion.div)`
   width: 12rem;
   height: 16rem;
   color: #c3c3c3;
-  margin: 1.6rem;
   position: absolute;
+  padding: 1.6rem;
   bottom: 0;
   right: 0;  
   font-family: "Inconsolata", monospace;
+  overflow: hidden;
 `;
 
 const About = () => {
@@ -24,7 +25,7 @@ const About = () => {
     viewport={{ once: false, amount: 0.25 }}
     >
       <ContainerSlideIn
-      variants={fadeIn("left", "tween", 0.2, 2)}
+      variants={fadeIn("left", "tween", 0.2, 1)}
       >
           <p>
             Born in 1815.

@@ -13,6 +13,7 @@ const Conteiner = styled(motion.div)`
   right: 0;
   font-family: "Inconsolata", monospace;
   z-index: 99;
+  overflow: hidden;
 `;
 
 export const ContainerSlideIn = styled(motion.div)`
@@ -38,7 +39,7 @@ const Projects = () => {
         {projects.map((exp, i) => {
           return (
             <ContainerSlideIn
-              variants={fadeIn("left", "tween", (i + 1) * 0.2, 1)}
+              variants={fadeIn("left", "tween", (i + 1) * 0.2, 0.8)}
               key={i}
             >
               <StyledProject>
