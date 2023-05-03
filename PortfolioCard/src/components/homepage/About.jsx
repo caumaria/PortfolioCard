@@ -25,16 +25,18 @@ const About = () => {
     viewport={{ once: false, amount: 0.25 }}
     >
       <ContainerSlideIn
-      variants={fadeIn("left", "tween", 0.2, 1)}
+      variants={fadeIn("left", "tween", 1.8, 1)}
       >
           <p>
-            Born in 1815.
+            Self-taught Front-end Developer.
+            <br></br>
+            Born in Brazil.
           </p>
+          <br></br>
           <p>
-            Caindo aos pedaços, lutando pela  
-            sobrevivencia nesse mundo cruel.
-            asha ara ara lal ala alalala
-            ashalalala lenga lenga WE NEED MORE WORDS, WATSON.
+            Techs: ReactJS, JS, Styled Components, SCSS, CSS, HTML.
+            <br></br>
+            I'm open to Job opportunities where I can contribute, learn and grow.
             <br></br>
             <br></br>
             Resume about cacadinha's life.
