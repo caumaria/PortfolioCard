@@ -1,42 +1,25 @@
 export const projects = [
     {
-      name: "DESIGN To HTML/CSS",
+      name: "Landing Page for Product",
       projects: "Fully Responsive Application",
-      year: "Study case, 2023."
+      year: "frontendmentor challenge, 2023.",
+      url: 'https://github.com/caumaria/product',
+      web: 'https://product-cau.vercel.app'
     },
     {
-      name: "WEB & MOBILE APP",
-      projects: "19 projects",
-      year: "Personal, 2023."
+      name: "Crypto Kingdom",
+      projects: "Crypto Tracker App",
+      year: "Personal, 2023.",
+      url: 'https://github.com/caumaria/CryptoKingdom'
     },
     {
       name: "JavaScript Support",
       projects: "Front-end Behaviorial Support",
-      year: "Study case, 2023."
-    },
-    {
-      name: "Design to HTML/CSS",
-      projects: "Fully Responsive Application",
       year: "Study case, 2023."
     },
     {
       name: "Web & Mobile App",
       projects: "19 projects",
-      year: "Study case, 2023."
-    },
-    {
-      name: "JavaScript Support",
-      projects: "Front-end Behaviorial Support",
-      year: "Study case, 2023."
-    },
-    {
-      name: "JavaScript Support",
-      projects: "Front-end Behaviorial Support",
-      year: "Study case, 2023."
-    },
-    {
-      name: "JavaScript Support",
-      projects: "Front-end Behaviorial Support",
       year: "Study case, 2023."
     },
 ];
