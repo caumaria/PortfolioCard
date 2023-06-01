@@ -10,7 +10,8 @@ export const projects = [
       name: "Crypto Kingdom",
       projects: "Crypto Tracker App",
       year: "Personal, 2023.",
-      url: 'https://github.com/caumaria/CryptoKingdom'
+      url: 'https://github.com/caumaria/CryptoKingdom',
+      web: 'https://crypto-kingdom.vercel.app'
     },
     {
       name: "JavaScript Support",
