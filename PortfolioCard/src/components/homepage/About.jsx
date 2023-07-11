@@ -5,8 +5,8 @@ import { fadeIn, staggerContainer } from '../data/motion';
 import { ContainerSlideIn } from '../../pages/Projects';
 
 const AboutDiv = styled(motion.div)`
-  width: 12rem;
-  height: 16rem;
+  width: 20rem;
+  height: auto;
   color: #c3c3c3;
   position: absolute;
   padding: 1.6rem;
@@ -31,14 +31,20 @@ const About = () => {
             Self-taught Front-end Developer Jr.
             <br></br>
             <br></br>
-            Born in Brazil.
+            Primary Techs: Javascript, ReactJs, CSS, Styled Components, SASS, HTML. Currently studying Typescript and Node.
           </p>
           <br></br>
           <p>
-            I'm open to Job opportunities where I can contribute, learn and grow.
+            I'm searching for a junior level position where I can utilize my skills to create amazing product with cool design & user experience.
             <br></br>
             <br></br>
-            We can chat about ReactJS, JS, Styled Components, SCSS, CSS, HTML.
+            My motivators are curiosity, delight, and the desire to achieve something remarkable. 
+            <br></br>
+            <br></br>
+            My goal is to create exceptional web experiences.
+            <br></br>
+            <br></br>
+            Let's work together to make a lasting impact.
           </p>
         </ContainerSlideIn>
     </AboutDiv>

@@ -24,15 +24,16 @@ export const ContainerSlideIn = styled(motion.div)`
 `;
 
 const StyledProject = styled.div`
-  width: 16rem;
+  width: 20rem;
   color: rgb(195, 195, 195);
   margin: 1.6rem;
 `;
 
 const Social = styled.img`
   border-radius: 100%;
-  width: 20px;
-  height: 20px;
+  width: 22px;
+  height: 22px;
+  margin-top: 6px;
   cursor: pointer;
 `;
 
@@ -54,7 +55,7 @@ const Projects = () => {
               <StyledProject>
                 <h3 style={{ fontWeight: 400 }}>• {exp.name}</h3>
                 <p style={{ fontWeight: 350 }}>{exp.projects}</p>
-                <p style={{ fontSize: 11, fontWeight: 700, float: "right" }}>
+                <p style={{ fontSize: 11, fontWeight: 700, float: "right", marginTop: 6}}>
                   {exp.year}
                 </p>
                 <div 
