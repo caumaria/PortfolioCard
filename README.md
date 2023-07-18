@@ -1,12 +1,39 @@
 # PortfolioCard
+<br>
 
-<hr>
+![image](https://github.com/caumaria/PortfolioCard/assets/88352423/361ee851-cdde-4f74-93af-abbbbbfda7ed)
+
+
+# 🧠 About<br>
+
 <br>
-Quick readme:::::::
+Clean Portfolio Card<br>
+Design by Keita Yamada<br>
+
 <br>
-Building a card portfolio
+
+# ⚙ Techs
+
 <br>
-Techs: React JS, styled components<br>
-new: framer motion, splash screen, transitions, animations
+  • React JS<br>
+  • styled components<br>
+
+# 🕹️ Features
 <br>
-ObJ: im actually learning about styled components :) <br>
+ • framer motion<br>
+ • splash screen<br>
+ • transitions<br>
+ • animations<br>
+
+# 📋 Requirements
+<br>
+• vite@latest and Javascript<br>
+• styled-components<br>
+
+# 🖥️ Installation
+<br>
+• Clone this repo<br>
+• Go to the project folder<br>
+• Install dependencies<br>
+• npm install<br>
+• npm start<br>
