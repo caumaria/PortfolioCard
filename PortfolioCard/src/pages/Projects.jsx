@@ -8,7 +8,6 @@ import web from "../assets/web.png";
 import Github from "../assets/github.svg";
 
 const Conteiner = styled(motion.div)`
-  width: auto;
   height: auto;
   color: #c3c3c3;
   position: absolute;
@@ -24,7 +23,6 @@ export const ContainerSlideIn = styled(motion.div)`
 `;
 
 const StyledProject = styled.div`
-  width: 20rem;
   color: rgb(195, 195, 195);
   margin: 1.6rem;
 `;
@@ -55,18 +53,24 @@ const Projects = () => {
               <StyledProject>
                 <h3 style={{ fontWeight: 400 }}>• {exp.name}</h3>
                 <p style={{ fontWeight: 350 }}>{exp.projects}</p>
-                <p style={{ fontSize: 11, fontWeight: 700, float: "right", marginTop: 6}}>
+                <p
+                  style={{
+                    fontSize: 11,
+                    fontWeight: 700,
+                    float: "right",
+                    marginTop: 6,
+                  }}
+                >
                   {exp.year}
                 </p>
-                <div 
-                style={{ 
-                  margin: 20, 
-                  display: 'flex', 
-                  justifyContent: "end"                  
-                  }}>
-                  <a 
-                  style={{ marginRight: 10 }}
-                  href={exp.url} target="blank">
+                <div
+                  style={{
+                    margin: 20,
+                    display: "flex",
+                    justifyContent: "end",
+                  }}
+                >
+                  <a style={{ marginRight: 10 }} href={exp.url} target="blank">
                     <Social src={Github} alt="Cau's Github" />
                   </a>
                   <a href={exp.web} target="blank">

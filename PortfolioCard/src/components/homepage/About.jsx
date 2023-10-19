@@ -5,7 +5,7 @@ import { fadeIn, staggerContainer } from '../data/motion';
 import { ContainerSlideIn } from '../../pages/Projects';
 
 const AboutDiv = styled(motion.div)`
-  width: 20rem;
+  max-width: 24rem;
   height: auto;
   color: #c3c3c3;
   position: absolute;
@@ -14,6 +14,10 @@ const AboutDiv = styled(motion.div)`
   right: 0;  
   font-family: "Inconsolata", monospace;
   overflow: hidden;
+
+  p {
+      padding-bottom: 1rem;
+    }
 `;
 
 const About = () => {
@@ -27,28 +31,28 @@ const About = () => {
       <ContainerSlideIn
       variants={fadeIn("left", "tween", 1.4, 1)}
       >
+        <div>
           <p>
             Self-taught Front-end Developer Jr.
-            <br></br>
-            <br></br>
+          </p>
+          <p>
             Primary Techs: Javascript, ReactJs, CSS, Styled Components, SASS, HTML. Currently studying Typescript and Node.
           </p>
-          <br></br>
           <p>
             I'm searching for a junior level position where I can utilize my skills to create amazing product with cool design & user experience.
-            <br></br>
-            <br></br>
+          </p>
+          <p>
             My motivators are curiosity, delight, and the desire to achieve something remarkable. 
-            <br></br>
-            <br></br>
+          </p>
+          <p>
             My goal is to create exceptional web experiences.
-            <br></br>
-            <br></br>
+          </p>
+          <p>
             Let's work together to make a lasting impact.
           </p>
+        </div>            
         </ContainerSlideIn>
     </AboutDiv>
-  )
-}
+  )}
 
 export default About
