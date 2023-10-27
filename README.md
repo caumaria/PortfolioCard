@@ -3,6 +3,10 @@
 
 ![image](https://github.com/caumaria/PortfolioCard/assets/88352423/361ee851-cdde-4f74-93af-abbbbbfda7ed)
 
+Principal objetivo: Aprender a usar animações, splash screens, framer motion e transições.<br>
+Detalhes e responsabilidades: Esse design é da Keita Yamada. Adoro como parece um daqueles cartões profissionais de contato.<br>
+Resultado: Um portfólio simples e neutro. Já estou montando um novo com um design mais moderno e interativo.<br>
+Tecnologias utilizadas: React Js, Styled Components <br>
 
 # 🧠 About<br>
 
